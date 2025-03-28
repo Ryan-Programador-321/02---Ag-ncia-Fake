@@ -38,6 +38,7 @@
         bottom: 150px;
         flex: 100%;
         text-align: center;
+        width: 100%;
 
     }
 
@@ -72,21 +73,58 @@
 }
 
 /* Dispositivos um pouco maiores, mas ainda pequenos (Pequenos Tablets e Smartphones + largos, 600px para cima) */
-@media only screen and (min-width: 600px) {
-    ...
+@media only screen and (min-width: 1005px) and (max-width: 1184px) {
+    .img-headline {
+        background-size: contain; }
+        
+    .navbar .logotipo{
+        flex: 20%;
+        /* border: 2px solid red; */
+        text-align: center;
+        font-family: "Lobster", sans-serif;
+        color: hsl(242, 43%, 43%);
+        font-size: 170%;
+        margin-left: 10%;
+        margin-bottom: ;
+        position: relative;
+        bottom: ; 
+        }
 }
 
 /*Dispostivos Médios (Tablets deitados, 768px para cima) */
-@media only screen and (min-width: 768px) {
-    ...
+@media only screen and (min-width: 1005px) and (max-width: 1075px) {
+    .navbar .logotipo{
+        flex: 20%;
+        /* border: 2px solid red; */
+        text-align: center;
+        font-family: "Lobster", sans-serif;
+        color: hsl(242, 43%, 43%);
+        font-size: 160%;
+        margin-left: 10%;
+        margin-bottom: ;
+        position: relative;
+        bottom: ; 
+        }
 }
 
 /* Dispostivos Largos (laptops/desktops, 992px para cima) */
-@media only screen and (min-width: 992px) {
-    ...
+@media only screen and (min-width: 1005px) and (max-width: 1012px){
+    .navbar .logotipo{
+        flex: 20%;
+        /* border: 2px solid red; */
+        text-align: center;
+        font-family: "Lobster", sans-serif;
+        color: hsl(242, 43%, 43%);
+        font-size: 155%;
+        margin-left: 10%;
+        margin-bottom: ;
+        position: relative;
+        bottom: ; 
+        }
 }
 
 /* Super Largos (Telas maiores laptops, desktops e até TVs, 1200px para cima) */
-@media only screen and (min-width: 1200px) {
-    ...
+@media only screen and (min-width: 1085px) {
+    .img-headline {
+        background-size: contain; }
 }
