@@ -1,107 +1,645 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+    <!DOCTYPE html>
+    <html lang="pt-br">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Um site para aprimorar mminhas habilidades práticas de programação">
-    <meta name="keywords" content="Agência, HTML, CSS">
-    <link rel="stylesheet" href="CSS/reset.css">
-    <link rel="stylesheet" href="CSS/estilos.css">
-    <link rel="stylesheet" href="CSS/fontes.css">
-    <link rel="stylesheet" href="CSS/responsivo.css">
-    
-
-    <title>Agência Fake</title>
-</head>
-
-<body >
-    <nav class="navbar">
-        <div class="logotipo">
-            <h1> <span style="color: #ff2978;">Agência</span> Fake</h1>
-        </div>
-        <div class="menu">
-            <a href="#">Home</a>
-            <a href="#">Sobre Nós</a>
-            <a href="#one">Serviços</a>
-            <a href="#" id="botao">Fale Conosco</a>
-        </div>
-    </nav>
-
-    <header class="header">
-        <div class="headline">
-            <h2 class="poli" style="letter-spacing: 15px; text-shadow: 2px 1px 0px #6acaf9;">Você achou a melhor</h2>
-
-            <h2 class="pola" style="font-size: 80px; text-shadow: 4px 1px 0px #6acaf9;; ">agência digital</h2>
-
-            <p style="font-size: 20px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae molestiae
-                quas assumenda, nostrum dolores officiis quia atque dolore incidunt necessitatibus perspiciatis quam
-                magni natus. Consequuntur quae earum modi quidem expedita.</p>
-
-            <a href="#two" class="contact-btn clicked">Contrate Agora!</a>
-        </div>
-
-        <div  class="img-headline"></div>
-    </header>
-<p id="one"></p>
-    <section  class="section">
-        <h2>O que podemos fazer pelo seu serviço?</h2>
-
-        <div id="two" class="servicos">
-
-            <div class="card">
-                <img src="./IMGs/browser.png" alt="">
-                <div class="card-text">
-                    <h3>Desenvolvimento de sites</h3>
-                    <p>Lorem ipsum dolor sit amet...</p>
-                </div>
-                <div class="ocult-text">
-                    <h3>Oculto</h3>
-                    <p>Texto oculto que aparece ao passar o mouse.</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="./IMGs/mobile-medical-apps.png" alt="">
-                <div class="card-text">
-                    <h3>Desenvolvimento de apps</h3>
-                    <p>Lorem ipsum dolor sit amet...</p>
-                </div>
-                <div class="ocult-text">
-                    <h3>Oculto</h3>
-                    <p>Texto oculto que aparece ao passar o mouse.</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="./IMGs/social-media.png" alt="">
-                <div class="card-text">
-                    <h3>Marketing digital</h3>
-                    <p>Lorem ipsum dolor sit amet...</p>
-                </div>
-                <div class="ocult-text">
-                    <h3>Oculto</h3>
-                    <p>Texto oculto que aparece ao passar o mouse.</p>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <footer>
-        <div class="logo-rodape">
-
-            <h2 class="agencia">Agência Fake</h2>
-
-            <p style="color: white;">Um site feito com HTML e CSS puro.</p>
-
-            <p class="poimi" style="color: white;"><b>© Todos os direitos reservados</b></p>
-        </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Um site para aprimorar mminhas habilidades práticas de programação">
+        <meta name="keywords" content="Agência, HTML, CSS">
+        <!-- <link rel="stylesheet" href="/CSS/reset.css"> -->
+        <!-- <link rel="stylesheet" href="/CSS/estilos.css"> -->
+       <!--  <link rel="stylesheet" href="/CSS/fontes.css"> -->
+        <!-- <link rel="stylesheet" href="/CSS/responsivo.css">  -->
         
-    </footer>
+        <style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/*roboto*/
 
-    <a href="https://wa.me/5527992221709?text=Me%20mande%20uma%20mensagem..." target="_blank"><img class="what" src="./IMGs/social_15707820.png" alt="ícone do whatsapp"></a>
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+/*lobster*/
 
-</body>
+* {
+    box-sizing: border-box;
+}
 
-</html>
+body {
+    margin: 0;
+}
+
+/* Logotipo e menu na parte superior da tela (01) */
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+.navbar {
+    /* display: flex;
+    flex-flow: row wrap; */
+    height: 90px;
+    background-color: rgb(255, 255, 255);
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid #ff2978;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+
+.logotipo {
+   /*  background-color: pink; */
+    display: inline-block;
+    /* flex: 30%; */
+    /* border: 2px solid red; */
+    /* text-align: center; */
+    font-family: "Lobster", sans-serif;
+    color: hsl(242, 43%, 43%);
+    font-size: 30px;
+    /* margin-left: 10%; */
+    /*margin-bottom: 30px;*/ 
+    /* position: relative;
+    bottom: 20px; */
+    padding: 20px 0px;
+    width: 50%;
+}
+.logotipo h1{
+    display: inline;
+    margin-left: 25%;
+}
+
+.menu {
+    /* background-color: rgb(179, 149, 244); */
+    display: inline-block;
+    width: 50%;
+   /*  flex: 70%; */
+    /*border: 2px solid rgb(0, 34, 255);*/
+    text-align: right;
+    padding: 20px;
+    /* margin-bottom: 60px; */
+    /* margin-left: 30%; */
+}
+
+.menu a {
+    display: inline-block;
+    text-decoration: none;
+    color: #413e9d;
+    font-size: 18px;
+    padding: 13px 16px;
+    position: relative;
+    bottom: 15px;
+}
+
+.menu a:hover {
+    color: #ff2978;
+    border-bottom: 4px solid #ff2978;
+}
+
+#botao {
+    background-color: #413e9d;
+    padding: 10px 25px;
+    color: white;
+    border-radius: 10px;
+    margin-right: 10%;
+    margin-left: 5%
+}
+
+#botao:hover {
+    border: none;
+    background-color: #ff2978;
+}
+
+/* conteudo chamativo (02) */
+
+.header {
+    display: flex;
+    flex-flow: row wrap;
+    height: 600px;
+    background-color: #ffffff;
+    padding-top: 60px;
+}
+
+.headline {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+    flex: 38%;
+    /* border: 2px solid rgb(0, 34, 255); */
+    justify-content: center;
+    align-items: center;
+}
+
+.headline h2 {
+    font-weight: 900;
+    font-size: 20px;
+    color: #413e9d;
+    margin: 0;
+    padding: 0;
+}
+
+
+.headline .pola{
+    font-size: 70px;
+    text-shadow: 4px 1px 0px #6acaf9;
+    order: 1;
+}
+
+
+
+.headline p {
+    text-align: left;
+    color: #413e9d;
+    order: 2;
+}
+
+.contact-btn {
+    display: flex;
+    background-color: #ff2978;
+    padding: 15px;
+    border-radius: 30px;
+    text-decoration: none;
+    color: #ffffff;
+    margin-top: 30px;
+    order: 4;
+}
+
+.contact-btn:hover {
+    background-color: #413e9d;
+}
+
+.img-headline {
+    background: url(/IMGs/happy-birthday-concept-illustration/10990697.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    flex: 52%;
+    padding-top: 601px;
+    order: 3;
+    /* border: 2px solid rgb(255, 85, 0); */
+}
+
+
+
+/* Apresentação (03) */
+
+
+.section {
+    display: inline-block;
+    margin-top: 90px;
+    /* border: 1px solid; */
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+}
+
+.section h2 {
+    width: 100%;
+    font-size: 50px;
+    margin: 0;
+    font-family: 'lobster', sans-serif;
+    text-align: center;
+    font-weight: bold;
+    color: #413e9d;
+}
+
+.servicos {
+    display: flex;
+    margin-top: 5%;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.card {
+    width: auto;
+    padding: 20px;
+    margin: 1%;
+    border: 2px solid #ff2978;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.card img {
+    max-width: 100%;
+}
+
+.card-text, .ocult-text {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.ocult-text {
+    display: none;
+}
+
+.card:hover {
+    background-color: #ff2978;
+    color: #ffffff;
+    padding: 40px;
+}
+
+.card:hover img, 
+.card:hover .card-text {
+    display: none;
+}
+
+.card:hover .ocult-text {
+    display: block;
+}
+
+footer{
+    display: flex;
+    margin-top: 100px;
+    height: 300px;
+    background: linear-gradient(180deg,#180f4a,#090422, black);
+    text-align: center;
+    border-top: 5px solid #ff2978;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .poimi{
+    position: relative;
+    top: 20px;
+}
+
+.agencia{
+    font-family: 'lobster', sans-serif;
+    color:#ffffff;
+    font-size: 30px;
+}
+
+.what{
+    position: fixed;
+    bottom: 2%;
+    left: 92%;
+    height: 100px;
+}
+
+.what:hover{
+    opacity: 0.5;
+}
+
+
+/* tablet/Smartphones (1005px para baixo) */
+@media only screen and (max-width: 1005px) {
+
+
+.navbar {
+    position: relative;
+}
+
+.menu {
+    display: none;
+}
+
+.logotipo {
+    /* margin: 0; */
+    text-align: center;
+    width: 100%;
+}
+
+.logotipo h1{
+    margin: auto;
+}
+
+.header {
+    padding-top: 50px;
+    display: block;
+}
+
+.headline {
+    flex: 100%;
+    margin: 5%;
+    text-align: center;
+}
+
+.headline p {
+    text-align: center;
+
+}
+
+.img-headline {
+    background-size: contain;
+    position: relative;
+    bottom: 150px;
+    flex: 100%;
+    text-align: center;
+    width: 100%;
+
+}
+
+.section {
+    margin-top: 350px;
+    text-align: center;
+}
+
+.servicos {
+    flex-direction: column;
+}
+
+.card {
+    flex: 100%;
+    width: 100%;
+}
+
+
+/* .contact-btn:hover{
+    background-color: inherit;
+} */
+
+.contact-btn {
+    padding: 20px 40px;
+    padding-bottom: 20px;
+    z-index: 1;
+    background-color:#413e9d
+}
+
+.contact-btn:active{
+    background-color: inherit;
+    transition: background 0.3s ease;
+}
+
+.headline .pola{
+    font-size: 300%;
+    margin-right: 5%;
+}
+
+.what{
+    position: fixed;
+    bottom: 2%;
+    left: 91.5%;
+    height: 65px;
+}
+
+}
+
+@media only screen and (max-width: 800px) {
+
+.what{
+    position: fixed;
+    bottom: 2%;
+    left: 90%;
+    height: 55px;
+}
+
+}
+
+@media only screen and (max-width: 600px) {
+
+.what{
+    position: fixed;
+    bottom: 2%;
+    left: 89%;
+    height: 50px;
+}
+
+}
+
+@media only screen and (max-width: 500px) {
+
+.what{
+    position: fixed;
+    bottom: 2%;
+    left: 84%;
+    height: 50px;
+}
+
+}
+@media only screen and (min-width: 1005px) and (max-width: 1195px) {
+
+    .img-headline {
+    background-size: contain; }
+    
+    .navbar {
+    height: 90px;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 2px solid #ff2978;
+    width: 100%;
+    z-index: 1;
+}
+
+    .logotipo {
+   /*  background-color: pink; */
+    display: inline-block;
+    font-family: "Lobster", sans-serif;
+    color: hsl(242, 43%, 43%);
+    width: 35%;
+    position: relative;
+    right: 10%;
+    bottom: 7%;
+    
+}
+.logotipo h1{
+    font-size: 45px;
+    position: relative;
+    left: 20%;
+    
+}
+
+.menu {
+    /* background-color: rgb(179, 149, 244); */
+    display: inline-block;
+    width: 60%;
+    text-align: right;
+    padding: 20px;
+    position: relative;
+    
+    
+}
+
+.menu a {
+    display: inline-block;
+    text-decoration: none;
+    color: #413e9d;
+    font-size: 18px;
+    padding: 1px 10px;
+    position: relative;
+    bottom: 15px;
+    
+}
+
+.headline .pola{
+    font-size: 50px;
+    margin-right: 20%;
+}
+
+.what{
+    position: fixed;
+    bottom: 2%;
+    left: 92%;
+    height: 76px;
+}
+
+} 
+/* Dispositivos um pouco maiores, mas ainda pequenos (Pequenos Tablets e Smartphones + largos, 600px para cima) */
+@media only screen and (min-width: 1195px) and (max-width: 1500px) {
+
+    .img-headline {
+    background-size: contain; }
+    
+   /*  .navbar {
+    height: 90px;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 2px solid #ff2978;
+    width: 100%;
+    z-index: 1;
+} */
+
+    .logotipo {
+   /*  background-color: pink; */
+    display: inline-block;
+    font-family: "Lobster", sans-serif;
+    color: hsl(242, 43%, 43%);
+    width: 35%;
+    position: relative;
+    right: 10%;
+    bottom: 7%;
+    
+}
+.logotipo h1{
+    font-size: 45px;
+    position: relative;
+    left: 20%;
+    
+}
+
+.menu {
+    /* background-color: rgb(179, 149, 244); */
+    display: inline-block;
+    width: 60%;
+    text-align: right;
+    padding: 20px;
+    position: relative;
+    
+    
+}
+
+.menu a {
+    display: inline-block;
+    text-decoration: none;
+    color: #413e9d;
+    font-size: 18px;
+    padding: 1px 10px;
+    position: relative;
+    bottom: 15px;
+    
+}
+
+.headline .pola{
+    font-size: 55px;
+    margin-right: 20%;
+}
+
+.headline {
+    
+    margin-top: -5%;
+}
+
+.what{
+    position: fixed;
+    bottom: 2%;
+    left: 92%;
+    height: 90px;
+}
+
+} 
+
+</style>
+
+        <title>Agência Fake</title>
+    </head>
+
+    <body >
+        <nav class="navbar">
+            <div class="logotipo">
+                <h1> <span style="color: #ff2978;">Agência</span> Fake</h1>
+            </div><div class="menu">
+                <a href="#">Home</a>
+                <a href="#">Sobre Nós</a>
+                <a href="#one">Serviços</a>
+                <a href="#" id="botao">Fale Conosco</a>
+            </div>
+        </nav>
+
+        <header class="header">
+            <div class="headline">
+                <h2 class="poli" style="letter-spacing: 15px; text-shadow: 2px 1px 0px #6acaf9;">Você achou a melhor</h2>
+
+                <h2 class="pola">agência digital</h2>
+
+                <p style="font-size: 20px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae molestiae
+                    quas assumenda, nostrum dolores officiis quia atque dolore incidunt necessitatibus perspiciatis quam
+                    magni natus. Consequuntur quae earum modi quidem expedita.</p>
+
+                <a href="#two" class="contact-btn clicked">Contrate Agora!</a>
+            </div>
+
+            <div  class="img-headline"></div>
+        </header>
+    <p id="one"></p>
+        <section  class="section">
+            <h2>O que podemos fazer pelo seu serviço?</h2>
+
+            <div id="two" class="servicos">
+
+                <div class="card">
+                    <img src="/IMGs/browser.png" alt="">
+                    <div class="card-text">
+                        <h3>Desenvolvimento de sites</h3>
+                        <p>Lorem ipsum dolor sit amet...</p>
+                    </div>
+                    <div class="ocult-text">
+                        <h3>Oculto</h3>
+                        <p>Texto oculto que aparece ao passar o mouse.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="/IMGs/mobile-medical-apps.png" alt="">
+                    <div class="card-text">
+                        <h3>Desenvolvimento de apps</h3>
+                        <p>Lorem ipsum dolor sit amet...</p>
+                    </div>
+                    <div class="ocult-text">
+                        <h3>Oculto</h3>
+                        <p>Texto oculto que aparece ao passar o mouse.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="/IMGs/social-media.png" alt="">
+                    <div class="card-text">
+                        <h3>Marketing digital</h3>
+                        <p>Lorem ipsum dolor sit amet...</p>
+                    </div>
+                    <div class="ocult-text">
+                        <h3>Oculto</h3>
+                        <p>Texto oculto que aparece ao passar o mouse.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <footer>
+            <div class="logo-rodape">
+
+                <h2 class="agencia">Agência Fake</h2>
+
+                <p style="color: white;">Um site feito com HTML e CSS puro.</p>
+
+                <p class="poimi" style="color: white;"><b>© Todos os direitos reservados</b></p>
+            </div>
+            
+        </footer>
+
+        <a href="https://wa.me/5527992221709?text=Me%20mande%20uma%20mensagem..." target="_blank"><img class="what" src="/IMGs/social_15707820.png" alt="ícone do whatsapp"></a>
+
+    </body>
+
+    </html>
